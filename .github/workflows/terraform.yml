@@ -7,11 +7,11 @@ on:
 
 jobs:
   terraform:
+    name: Terraform Init & Plan
+    runs-on: ubuntu-latest
     uses:
     with:
       CONFIG_DIR: "./infrastructure"
-    name: Terraform Init & Plan
-    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
