@@ -21,8 +21,8 @@ resource "google_folder" "raju_folder" {
 
 
 resource "google_project" "my_project" {
-  name       = "Raju-Sub-Project"
-  project_id = "Raju-Sub-Projec"  # must be globally unique
+  name       = "raju-sub-project"
+  project_id = "raju-sub-project"  # must be globally unique
 
   billing_account = "01CCA3-1E791F-50DFD9"  # your billing account ID
 }
