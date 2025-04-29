@@ -9,9 +9,6 @@ jobs:
   terraform:
     name: Terraform Init & Plan
     runs-on: ubuntu-latest
-    uses:
-    with:
-      CONFIG_DIR: "./infrastructure"
 
     steps:
     - name: Checkout repository
@@ -29,11 +26,14 @@ jobs:
 
     - name: Terraform Init
       run: terraform init
+      working-directory: ./infrastructure
 
     - name: Terraform Validate
       run: terraform validate
+      working-directory: ./infrastructure
 
     - name: Terraform Plan
       run: terraform plan -input=false
+      working-directory: ./infrastructure
     
     
