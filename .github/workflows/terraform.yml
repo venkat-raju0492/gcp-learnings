@@ -4,6 +4,13 @@ on:
   push:
     branches:
       - main
+  workflow_call:
+    inputs:
+      CONFIG_DIR:
+        required: true
+        default: './infrastructure'
+        description: Directory containing Terraform configuration files.
+        type: string
 
 jobs:
   terraform:
