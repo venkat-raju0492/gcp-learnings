@@ -4,11 +4,11 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'infrastructure/**'
 
 jobs:
   terraform:
+    with:
+      CONFIG_DIR: "./infrastructure"
     name: Terraform Init & Plan
     runs-on: ubuntu-latest
 
